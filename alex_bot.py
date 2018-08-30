@@ -45,13 +45,6 @@ async def on_message(message):
         b = 'El de mi polla con cianuro'
         msg = random.choice([a, b]).format(message)
         await client.send_message(message.channel, msg)
-	
-    if ('hola') in message.content:
-        msg = 'Pa\' ti mi cola {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
-        time.sleep(1)
-        msg = '{0.author.mention} y tu nariz conta mis bolas'.format(message)
-        await client.send_message(message.channel, msg
 
 @client.event
 async def multiply(ctx, a: int, b: int):
@@ -65,8 +58,8 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')
-    await client.send_message(discord.Object(id='481951758722138113'), 'Archie is now online!')
-    await client.change_presence(game=discord.Game(name="CAD Developers | !help"))
+    await client.send_message(discord.Object(id='481951758722138113'), 'YourBoss is now online!')
+    await client.change_presence(game=discord.Game(name="CADevelopers | ?help"))
 
 #GPIO.setmode(GPIO.BCM)
 
