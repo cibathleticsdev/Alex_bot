@@ -45,12 +45,13 @@ async def on_message(message):
         b = 'El de mi polla con cianuro'
         msg = random.choice([a, b]).format(message)
         await client.send_message(message.channel, msg)
-
+'''
 @client.event
 async def multiply(ctx, a: int, b: int):
     if message.content.startswith('!multiply'):
         print('hello')
 	#await ctx.send(a*b)
+'''
 
 @client.event
 async def on_ready():
