@@ -41,9 +41,9 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if ('arturo') in message.content:
-	a = 'El del ciruelo duro'
-	b = 'El de mi polla con cianuro'
-	msg = 'Arturo, '.format(message) + random.choice([a, b])
+        a = 'El del ciruelo duro'
+	    b = 'El de mi polla con cianuro'
+	    msg = 'Arturo, '.format(message) + random.choice([a, b])
         await client.send_message(message.channel, msg)
 
 @client.event
