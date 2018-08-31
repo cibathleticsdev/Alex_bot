@@ -20,6 +20,53 @@ async def on_message(message):
     if message.author == client.user:
         return
 
+    #if ('boss') in message.content:
+     #   msg = 'What do you want?'.format(message)
+     #   await client.send_message(message.channel, msg)
+
+    #if ('MyBoss') in message.content:
+     #   msg = 'What do you want?'.format(message)
+     #   await client.send_message(message.channel, msg)
+
+    if message.content.startswith('?myname'):
+        msg = 'I don\'t care your name {0.author.mention}'.format(message)
+        await client.send_message(message.channel, msg)
+        sleep(1)
+        msg = 'Ok\.\.\.Your name is: {0.author.display_name}'.format(message)
+        await client.send_message(message.channel, msg)
+
+    if message.content.startswith('?datetime'):
+        msg = 'Your current date and time: ' + str(datetime.datetime.now())
+        await client.send_message(message.channel, msg)
+        msg = 'I have another time because I am in holidays, haha {0.author.mention}'.format(message)
+        await client.send_message(message.channel, msg)
+
+  # do not remove '?update' !!
+    if message.content.startswith('?update'):
+        msg = 'Wait a few seconds...'.format(message)
+        await client.send_message(message.channel, msg)
+        msg = 'Updating Your boss'.format(message)
+        await client.send_message(message.channel, msg)
+        msg = 'Your boss is now offline!'.format(message)
+        await client.send_message(message.channel, msg)
+        msg = 'Party is on!:smile::grinning::smiley::tada: '.format(message)
+        await client.send_message(message.channel, msg)
+        os.system("python3 ~/discord/update.py")
+        time.sleep(5)
+        exit()
+
+  #  if message.content.startswith('?add'):
+  #      async def add(ctx, a: int, b: int):
+  #      await client.send(a+b)
+
+  #  Leave !help always the last one. Please update in GitHub any changes.
+    if message.content.startswith('?help'):
+        msg = 'Hi there! Here are the commands you can use with me so far: https://github.com/cibathleticsdev/archie-bot/blob/chorras/README.md#commands. My prefix is "?"'.format(message)
+        await client.send_message(message.channel, msg)
+
+
+    #message.content
+
     if ('pepe') in message.content:
         a = 'El que te la mete hasta por el retrete!'
         b = 'El que te mete el nepe!'
@@ -28,12 +75,38 @@ async def on_message(message):
         msg = 'Pepe, '.format(message) + random.choice([a, b, c, d])
         await client.send_message(message.channel, msg)
 
+    if ('hello boss') in message.content:
+        msg = 'Hello {0.author.mention}, my little padawan'.format(message)
+        await client.send_message(message.channel, msg)
+        time.sleep(1)
+        msg = 'How are you today {0.author.mention}?'.format(message)
+        await client.send_message(message.channel, msg)
+
+
+    if ('good night boss') in message.content:
+        msg = 'Good night {0.author.mention}, see you towmorrow'.format(message)
+        await client.send_message(message.channel, msg)
+        time.sleep(1)
+        msg = 'stop watching youtube videos :laughing:'.format(message)
+        await client.send_message(message.channel, msg)
+
+    if ('fine thanks boss') in message.content:
+        msg = 'Cool, {0.author.mention}'.format(message)
+        await client.send_message(message.channel, msg)
+        time.sleep(2)
+        msg = 'I\'m fine too :laughing:'.format(message)
+        await client.send_message(message.channel, msg)
+
+    if ('not fine boss') in message.content:
+        msg = 'well, hope you\'ll be ok {0.author.mention}'.format(message)
+        await client.send_message(message.channel, msg)
+
     if ('hola') in message.content:
-                msg = 'Pa\' ti mi cola {0.author.mention}'.format(message)
-                await client.send_message(message.channel, msg)
-                time.sleep(1)
-                msg = '{0.author.mention} y tu nariz conta mis bolas'.format(message)
-                await client.send_message(message.channel, msg
+        msg = 'Pa\' ti mi cola {0.author.mention}'.format(message)
+        await client.send_message(message.channel, msg)
+        time.sleep(1)
+        msg = '{0.author.mention} y tu nariz conta mis bolas'.format(message)
+        await client.send_message(message.channel, msg
 
     if ('enrique') in message.content:
         msg = 'El que te la mete detrás del tabique!'.format(message)
