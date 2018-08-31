@@ -77,7 +77,7 @@ async def on_message(message):
 
   #  Leave !help always the last one. Please update in GitHub any changes.
     if message.content.startswith('?help'):
-        msg = 'Hi there! Here are the commands you can use with me so far: https://github.com/cibathleticsdev/archie-bot/blob/chorras/README.md#commands. My prefix is "?"'.format(message)
+        msg = 'Hi there! Here are the commands you can use with me so far: https://github.com/cibathleticsdev/yourboss_bot/blob/master/README.md#commands. My prefix is "?"'.format(message)
         await client.send_message(message.channel, msg)
 
 <<<<<<< HEAD
