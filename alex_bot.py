@@ -73,6 +73,13 @@ async def on_message(message):
         msg = 'How are you today {0.author.mention}?'.format(message)
         await client.send_message(message.channel, msg)
 
+    if ('fine thanks boss') in message.content:
+        msg = 'Cool, {0.author.mention}'.format(message)
+        await client.send_message(message.channel, msg)
+        time.sleep(2)
+        msg = 'I\'m fine too :laughing:'.format(message)
+        await client.send_message(message.channel, msg)
+
     if ('good night boss') in message.content:
         msg = 'Good night {0.author.mention}, see you towmorrow'.format(message)
         await client.send_message(message.channel, msg)
@@ -86,13 +93,6 @@ async def on_message(message):
         time.sleep(1)
         msg = '{0.author.mention} y tu nariz conta mis bolas'.format(message)
         await client.send_message(message.channel, msg
-
-    if ('fine thanks boss') in message.content:
-        msg = 'Cool, {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
-        time.sleep(2)
-        msg = 'I\'m fine too :laughing:'.format(message)
-        await client.send_message(message.channel, msg)
 
     if ('not fine boss') in message.content:
         msg = 'well, hope you\'ll be ok {0.author.mention}'.format(message)
