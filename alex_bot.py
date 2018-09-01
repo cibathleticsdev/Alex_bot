@@ -81,6 +81,10 @@ async def on_message(message):
         msg = 'Pepe, '.format(message) + random.choice([a, b, c, d])
         await client.send_message(message.channel, msg)
 
+    if ('enrique') in message.content:
+        msg = 'El que te la mete detrás del tabique!'.format(message)
+        await client.send_message(message.channel, msg)
+
     if ('not fine boss') in message.content:
         msg = 'well, hope you\'ll be ok {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
@@ -105,10 +109,6 @@ async def on_message(message):
         time.sleep(1)
         msg = '{0.author.mention} y tu nariz conta mis bolas'.format(message)
         await client.send_message(message.channel, msg
-
-    if ('enrique') in message.content:
-        msg = 'El que te la mete detrás del tabique!'.format(message)
-        await client.send_message(message.channel, msg)
 
     if ('yolanda') in message.content:
         msg = 'La que folla mas que anda!'.format(message)
