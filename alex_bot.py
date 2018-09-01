@@ -73,10 +73,17 @@ async def on_message(message):
         msg = 'How are you today {0.author.mention}?'.format(message)
         await client.send_message(message.channel, msg)
 
+    if ('pepe') in message.content:
+        a = 'El que te la mete hasta por el retrete!'
+        b = 'El que te mete el nepe!'
+        c = 'El que te la saca y te la mete!'
+        d = 'El que hasta los huevos me mete'
+        msg = 'Pepe, '.format(message) + random.choice([a, b, c, d])
+        await client.send_message(message.channel, msg)
+
     if ('not fine boss') in message.content:
         msg = 'well, hope you\'ll be ok {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
-    
 
     if ('fine thanks boss') in message.content:
         msg = 'Cool, {0.author.mention}'.format(message)
@@ -98,14 +105,6 @@ async def on_message(message):
         time.sleep(1)
         msg = '{0.author.mention} y tu nariz conta mis bolas'.format(message)
         await client.send_message(message.channel, msg
-
-    if ('pepe') in message.content:
-        a = 'El que te la mete hasta por el retrete!'
-        b = 'El que te mete el nepe!'
-        c = 'El que te la saca y te la mete!'
-        d = 'El que hasta los huevos me mete'
-        msg = 'Pepe, '.format(message) + random.choice([a, b, c, d])
-        await client.send_message(message.channel, msg)
 
     if ('enrique') in message.content:
         msg = 'El que te la mete detrás del tabique!'.format(message)
