@@ -81,6 +81,12 @@ async def on_message(message):
         msg = 'Pepe, '.format(message) + random.choice([a, b, c, d])
         await client.send_message(message.channel, msg)
 
+    if ('arturo') in message.content:
+    	a = 'El del ciruelo duro'
+    	b = 'El de mi polla con cianuro'
+	    msg = 'Arturo, '.format(message) + random.choice([a, b])
+        await client.send_message(message.channel, msg)
+
     if ('fernando') in message.content:
         msg = 'El de los huevos colgando y la picha arrastrando!'.format(message)
         await client.send_message(message.channel, msg)
@@ -117,12 +123,6 @@ async def on_message(message):
         time.sleep(1)
         msg = '{0.author.mention} y tu nariz conta mis bolas'.format(message)
         await client.send_message(message.channel, msg
-
-    if ('arturo') in message.content:
-    	a = 'El del ciruelo duro'
-    	b = 'El de mi polla con cianuro'
-	    msg = 'Arturo, '.format(message) + random.choice([a, b])
-        await client.send_message(message.channel, msg)
 
 
 # @client.event
