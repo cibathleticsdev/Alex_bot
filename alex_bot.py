@@ -82,8 +82,8 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if ('arturo') in message.content:
-    	a = 'El del ciruelo duro'
-    	b = 'El de mi polla con cianuro'
+        a = 'El del ciruelo duro'
+        b = 'El de mi polla con cianuro'
         msg = 'Arturo, '.format(message) + random.choice([a, b])
         await client.send_message(message.channel, msg)
 
@@ -125,22 +125,6 @@ async def on_message(message):
         await client.send_message(message.channel, msg
 
 
-# @client.event
-# async def on_message(message):
-#     if message.content.lower().startswith('?test'):
-#         await client.send_message(message.channel, "Test bestanden")
-#
-#     if message.content.lower().startswith('?coin'): #Coinflip 50/50% chance kopf oder zahl
-#         choice = random.randint(1,2)
-#         if choice == 1:
-#             await client.add_reaction(message, '🌑')
-#         if choice == 2:
-#             await client.add_reaction(message, '🌕')
-
-@client.event
-async def multiply(ctx, a: int, b: int):
-    if message.content.startswith('!multiply'):
-        print('hello')
 	#await ctx.send(a*b)
 
 
@@ -150,7 +134,7 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')
-    await client.send_message(discord.Object(id='445639247647473676'), 'Your boss is now online!')
+    await client.send_message(discord.Object(id='445639247647473676'), 'YourBoss is now online!')
     await client.change_presence(game=discord.Game(name="Fortnite"))
 
 #GPIO.setmode(GPIO.BCM)
