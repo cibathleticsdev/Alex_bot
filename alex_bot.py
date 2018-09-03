@@ -137,7 +137,6 @@ async def on_ready():
     await client.send_message(discord.Object(id='445639247647473676'), 'YourBoss is now online!')
     await client.change_presence(game=discord.Game(name="Fortnite"))
 
-bot.run('Bot-User-Token')
 
 #GPIO.setmode(GPIO.BCM)
 
