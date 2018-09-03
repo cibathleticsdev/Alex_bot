@@ -137,10 +137,12 @@ async def on_ready():
     await client.send_message(discord.Object(id='445639247647473676'), 'YourBoss is now online!')
     await client.change_presence(game=discord.Game(name="Fortnite"))
 
+bot.run('Bot-User-Token')
+
 #GPIO.setmode(GPIO.BCM)
 
 #GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
-if __name__ == '__main__':
+    if __name__ == '__main__':
     import config
     client.run(config.token)
