@@ -41,24 +41,6 @@ async def on_message(message):
         msg = 'Did not introduced myself yet? My apologies, I\'m Your boss, the official Fortnite\'s CAD\'s player created by my own boss. Nice to meet you {0.author.mention}! You can see the list of commands that you can use by typing ?help'.format(message)
         await client.send_message(message.channel, msg)
 
-  # do not remove '?update' !!
-    if message.content.startswith('?update'):
-        msg = 'Wait a few seconds...'.format(message)
-        await client.send_message(message.channel, msg)
-        msg = 'Updating Your boss'.format(message)
-        await client.send_message(message.channel, msg)
-        msg = 'Your boss is now offline!'.format(message)
-        await client.send_message(message.channel, msg)
-        msg = 'Party is on!:smile::grinning::smiley::tada: '.format(message)
-        await client.send_message(message.channel, msg)
-        os.system("python3 ~/discord/update.py")
-        time.sleep(5)
-        exit()
-
-  #  if message.content.startswith('?add'):
-  #      async def add(ctx, a: int, b: int):
-  #      await client.send(a+b)
-
   #  Leave ?help always the last one. Please update in GitHub any changes.
     if message.content.startswith('?help'):
         msg = 'Hi there! Here are the commands you can use with me so far: https://github.com/cibathleticsdev/archie-bot/blob/chorras/README.md#commands. My prefix is "?"'.format(message)
@@ -125,9 +107,6 @@ async def on_message(message):
         await client.send_message(message.channel, msg
 
 
-	#await ctx.send(a*b)
-
-
 @client.event
 async def on_ready():
     print('Logged in as')
@@ -138,10 +117,6 @@ async def on_ready():
     await client.change_presence(game=discord.Game(name="Fortnite"))
 
 
-#GPIO.setmode(GPIO.BCM)
-
-#GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-
-    if __name__ == '__main__':
+if __name__ == '__main__':
     import config
     client.run(config.token)
