@@ -106,14 +106,17 @@ async def on_message(message):
         msg = '{0.author.mention} y tu nariz conta mis bolas'.format(message)
         await client.send_message(message.channel, msg
 
-@client.event
-async def on_ready():
+    await client.send_message(discord.Object(id='481951758722138113'), 'YourBoss is now online!')
+    await client.change_presence(game=discord.Game(name="Fortnite"))
+
+#@client.event
+#async def on_ready():
     #print('Logged in as')
     #print(client.user.name)
     #print(client.user.id)
     #print('------')
-    await client.send_message(discord.Object(id='481951758722138113'), 'YourBoss is now online!')
-    await client.change_presence(game=discord.Game(name="Fortnite"))
+    #await client.send_message(discord.Object(id='481951758722138113'), 'YourBoss is now online!')
+    #await client.change_presence(game=discord.Game(name="Fortnite"))
 
 
 if __name__ == '__main__':
