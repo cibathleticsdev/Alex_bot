@@ -1,8 +1,11 @@
 import discord
 from discord.ext import commands
+from discord.ext.commands import Bot
+from discord.voice_client import VoiceClient
 import os
 from os import getenv
 import asyncio
+import async
 import ctx
 import time
 import random
@@ -109,14 +112,14 @@ async def on_message(message):
     #await client.send_message(discord.Object(id='481951758722138113'), 'YourBoss is now online!')
     #await client.change_presence(game=discord.Game(name="Fortnite"))
 
-#@client.event
-#async def on_ready():
-    #print('Logged in as')
-    #print(client.user.name)
-    #print(client.user.id)
-    #print('------')
-    #await client.send_message(discord.Object(id='481951758722138113'), 'YourBoss is now online!')
-    #await client.change_presence(game=discord.Game(name="Fortnite"))
+@client.event
+async def on_ready():
+    print('Logged in as')
+    print(client.user.name)
+    print(client.user.id)
+    print('------')
+    await client.send_message(discord.Object(id='481951758722138113'), 'YourBoss is now online!')
+    await client.change_presence(game=discord.Game(name="Fortnite"))
 
 if __name__ == '__main__':
     import config
