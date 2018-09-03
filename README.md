@@ -13,9 +13,6 @@ If you have any doubt, info, any question or something you have to tell us, don'
 
 ## Commands
 
-#### Action (Server)
-   - !update (to update any changes)
-
 #### Conversation
    - hello boss
    - not fine boss
