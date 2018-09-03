@@ -112,7 +112,7 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')
-    await client.send_message(discord.Object(id='445639247647473676'), 'YourBoss is now online!')
+    aawait client.send_message(discord.Object(id='481951758722138113'), 'YourBoss is now online!')
     await client.change_presence(game=discord.Game(name="Fortnite"))
 
 
