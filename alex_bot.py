@@ -121,6 +121,6 @@ async def on_ready():
     await client.change_presence(game=discord.Game(name="Fortnite"))
 
                                   
-if __name__ == '__main__':
+if _name_ == '_main_':
     import config
     client.run(config.token)
