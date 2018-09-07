@@ -120,7 +120,6 @@ async def on_ready():
     await client.send_message(discord.Object(id='481951758722138113'), 'YourBoss is now online!')
     await client.change_presence(game=discord.Game(name="Fortnite"))
 
-                                  
-if _name_ = '_main_':
+if __name__ == '__main__':
     import config
     client.run(config.token)
