@@ -29,7 +29,7 @@ async def on_message(message):
     if message.content.startswith('?myname'):
         msg = 'I don\'t care your name {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
-        sleep(1)
+        sleep(5)
         msg = 'Ok...Your name is: {0.author.display_name}'.format(message)
         await client.send_message(message.channel, msg)
 
@@ -53,7 +53,7 @@ async def on_message(message):
     if ('hello boss') in message.content:
         msg = 'Hello {0.author.mention}, my padawan'.format(message)
         await client.send_message(message.channel, msg)
-        time.sleep(1)
+        time.sleep(3)
         msg = 'How are you today {0.author.mention}?'.format(message)
         await client.send_message(message.channel, msg)
 
